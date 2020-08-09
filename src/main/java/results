@@ -1,0 +1,21 @@
+Top 20 Pizza Toppings
+# 1: ["pepperoni"], count: 4616
+# 2: ["mozzarella cheese"], count: 1014
+# 3: ["four cheese"], count: 956
+# 4: ["bacon"], count: 732
+# 5: ["beef"], count: 623
+# 6: ["sausage"], count: 402
+# 7: ["italian sausage"], count: 361
+# 8: ["chicken"], count: 229
+# 9: ["four cheese", "pepperoni"], count: 203
+# 10: ["ham"], count: 165
+# 11: ["mushrooms"], count: 159
+# 12: ["mozzarella cheese", "pepperoni"], count: 155
+# 13: ["beef", "pepperoni"], count: 122
+# 14: ["bacon", "pepperoni"], count: 121
+# 15: ["black olives"], count: 117
+# 16: ["alredo sauce"], count: 101
+# 17: ["pepperoni", "sausage"], count: 96
+# 18: ["cheddar cheese"], count: 95
+# 19: ["italian sausage", "pepperoni"], count: 85
+# 20: ["pineapple"], count: 79
