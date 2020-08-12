@@ -17,7 +17,6 @@ public class PizzaTopping {
     private JsonArray rootJsonArray;
     private ArrayList<Toppings> emptyArrayList= new ArrayList<Toppings>();
     private int freq;
-    private String oloURL = "https://www.olo.com/pizzas.json";
 
     public static void main(String[] args) throws IOException {
         String oloURL = "https://www.olo.com/pizzas.json";
@@ -42,7 +41,6 @@ public class PizzaTopping {
         {
             JsonElement response = jp.parse(new InputStreamReader((InputStream) requestSend.getContent())); //Convert the input stream to a json element
             rootJsonArray = (JsonArray)jp.parse(String.valueOf(response));
-            System.out.println(rootJsonArray);
         }
         catch (Exception e)
         {
@@ -56,7 +54,7 @@ public class PizzaTopping {
         {
             for (int i=0;i<rootJsonArray.size();i++)
             {
-                aList.add(rootJsonArray.get(i).toString());
+                aList.add(rootJsonArray.get(i).getAsString());
             }
         }
         return aList;
@@ -93,10 +91,10 @@ public class PizzaTopping {
         emptyArrayList.sort(Comparator.comparing(Toppings::getFrequency).reversed());
 
         System.out.println("Top 20 Pizza Toppings");
-        for(int i=0; i<20; i++)
-        {
+        for(int i=0; i<20; i++) {
             Toppings toppings = emptyArrayList.get(i);
-            System.out.println("# " + (i+1) + ": " + toppings.getToppingsArrayList() + ", count: " +  toppings.getFrequency());
+            String listOfToppings = (toppings.getToppingsArrayList().toString().substring(1,toppings.getToppingsArrayList().toString().length()-1));
+            System.out.println("# " + (i+1) + ": " + listOfToppings + ". Count: " +  toppings.getFrequency());
         }
     }
 

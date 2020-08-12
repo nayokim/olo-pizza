@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Toppings
 {
-    int frequency;
-    ArrayList<String> toppingsArrayList;
+    private int frequency;
+    private ArrayList<String> toppingsArrayList;
 
     public int getFrequency()
     {
